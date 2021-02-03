@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWM-Sass</title>
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="./vendors/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./vendors/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- END OF CSS LINKS -->
+</head>
+
+<body>
+
+    <head>
+        <!-- NAVBAR-BIG-SCREENS -->
+        <div class="navbar-custom">
+            <nav class="navbar navbar-expand-md">
+                <!-- <div class="space-between"> -->
+                <a class="navbar-brand" href="#"><img class="logo-image" src="./images/logo.svg" alt="alternative"></a>
+                <ul class="navbar-nav">
+                    <!-- Dropdown Menu -->
+                    <li class="dropdown-link">
+                        <div class="dropdown">
+                            <a class="nav-link active" href="#" role="button">Vehicle</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="">
+                                    <div class="car">
+                                        <img class="dropdown-car" src="./images/blue-car.png" alt="">
+                                        <img class="dropdown-car-name" src="./images/car-name.png" alt="">
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="car">
+                                        <img class="dropdown-car" src="./images/blue-car.png" alt="">
+                                        <img class="dropdown-car-name" src="./images/car-name.png" alt="">
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="car">
+                                        <img class="dropdown-car" src="./images/red-car.png" alt="">
+                                        <img class="dropdown-car-name" src="./images/car-name.png" alt="">
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="car">
+                                        <img class="dropdown-car" src="./images/blue-car.png" alt="">
+                                        <img class="dropdown-car-name" src="./images/car-name.png" alt="">
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="car">
+                                        <img class="dropdown-car" src="./images/blue-car.png" alt="">
+                                        <img class="dropdown-car-name" src="./images/car-name.png" alt="">
+                                    </div>
+                                </a>
+                                <a class="dropdown-item" href="">
+                                    <div class="car">
+                                        <img class="dropdown-car" src="./images/blue-car.png" alt="">
+                                        <img class="dropdown-car-name" src="./images/car-name.png" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Test Drive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ar</a>
+                    </li>
+                </ul>
+                <!-- </div> -->
+            </nav>
+        </div>
+        <!-- END OF NAVBAR-BIG-SCREENS -->
+
+        <!-- NAVBAR-SMALL-SCREENS -->
+        <nav>
+            <div class="navbar-toggle">
+                <a href="#"><img class="logo-img" src="./images/logo.svg" alt="alternative"></a>
+                <!-- <a class="menu-btn" href="" onclick="openNav()"><img src="./images/icons/menu-icon.svg" alt=""></a> -->
+                <a class="menu-btn" href="#"><img src="./images/icons/menu-icon.svg" alt=""></a>
+                <div class="overlay">
+                    <div id="menu" class="flex-container">
+                        <div class="flex-left">
+                            <button class="btn-style-2">Ar</button>
+                        </div>
+                        <div class="flex-right">
+                            <!-- <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">
+                                <img class="close-icon" src="./images/icons/close-icon.svg" alt="">
+                            </a> -->
+                            <a class="close-mobile-menu" href="#">
+                                <img class="close-icon" src="./images/icons/close-icon.svg" alt="">
+                            </a>
+                            <ul class="mobile-menu">
+                                <li class="dropdown">
+                                    <div class="nav-item">
+                                        <a class="dropdown-button" href="#" onclick="toggle()">Vehicle</a>
+                                        <div id="dropdown-menu" class="dropdown-content">
+                                            <ul class="dropdown-items">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Haval H6</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Haval H6</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Haval H6</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Offers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Test Drive</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact Us</a>
+                                </li>
+                            </ul>
+                            <div class="menu-social-media">
+                                <div class="social-media">
+                                    <a href="#" class="fa fa-facebook"></a>
+                                    <a href="#" class="fa fa-twitter"></a>
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- END OF NAVBAR-SMALL-SCREENS -->
+    </head>
+
+    <main>
+        <div class="home-screen-container">
+            <!-- SLIDER -->
+            <div class="slider">
+                <div class="slider-container">
+                    <div class="swiper-container card-slider">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="slider-car" src="images/red-car.png" alt="alternative">
+                                    <img class="slider-car-name" src="images/car-name.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="slider-car redcar" src="images/blue-car.png" alt="alternative">
+                                    <img class="slider-car-name" src="images/car-name.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="slider-car" src="images/blue-car.png" alt="alternative">
+                                    <img class="slider-car-name" src="images/car-name.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF SLIDER -->
+
+            <!-- DISCOVERE MORE BUTTON -->
+            <div class="container">
+                <div class="discover-more-btn">
+                    <button class="btn-style-1">DISCOVER MORE</button>
+                </div>
+            </div>
+            <!-- END OF DISCOVER MORE BUTTON -->
+
+            <!-- SOCIAL MEDIA, & SLIDER BUTTONS -->
+            <div class="container">
+                <div class="home-footer">
+                    <div class="row">
+                        <div class="col-lg-4 order-1">
+                            <div class="social-media">
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 order-2 mouse">
+                            <button class="mouse-btn"></button>
+                        </div>
+                        <div class="col-lg-4 order-lg-3">
+                            <div class="pagination">
+                                <div class="swiper-btn-prev">
+                                    <a id="prev" href="#" class="prev-text"><img class="left-arrow" src="./images/icons/left-arrow-icon.png" alt="">PREV</a>
+                                </div>
+                                <div class="counter">
+                                    <p id="counter" class="counter-text"></p>
+                                </div>
+                                <div class="next swiper-btn-next">
+                                    <a id="next" href="#" class="next-text">NEXT<img class="right-arrow"
+                                            src="./images/icons/right-arrow-icon.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF SOCIAL MEDIA, & SLIDER BUTTONS -->
+        </div>
+    </main>
+    <!-- SCRIPTS -->
+    <script src="./vendors/js/jquery.min.js" type="text/javascript"></script>
+    <script src="./vendors/js/swiper.min.js" type="text/javascript"></script>
+    <script src="./vendors/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./vendors/js/morphext.min.js" type="text/javascript"></script>
+    <script src="./js/pages/home.js" type="text/javascript"></script>
+    <script src="/js/app.js"></script>
+    <!-- END OF SCRIPTS -->
+</body>
+
+</html>

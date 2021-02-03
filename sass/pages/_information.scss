@@ -1,0 +1,579 @@
+/**SECTION ONE**/
+
+.information-section-1 {
+    .car-info {
+        margin-top: 50px;
+        .car-name {
+            width: 90%;
+        }
+        .overview {
+            p {
+                margin: 0 0;
+            }
+            margin-top: 20px;
+            .overview-head {
+                color: $secondry-color;
+            }
+            .overview-details {
+                margin-top: 20px;
+            }
+        }
+        .performance {
+            p {
+                margin: 0 0;
+            }
+            margin-top: 50px;
+            .performance-head {
+                color: $secondry-color;
+            }
+            .performance-details {
+                margin-top: 20px;
+            }
+        }
+        .car-image {
+            width: 100%;
+        }
+    }
+}
+
+
+/**END OF SECTION ONE**/
+
+
+/**SECTION TWO**/
+
+
+/**SECTION TWO DESKTOP VERSION**/
+
+.information-navigation-menu {
+    width: 100%;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .list-link {
+        width: auto;
+        margin: 0px 20px;
+        border-bottom: 1px solid transparent;
+        &:hover {
+            border-bottom-color: $secondry-color;
+            padding: 5px 0;
+            @include transition(.3s)
+        }
+    }
+}
+
+
+/**END OF SECTION TWO DESKTOP VERSION**/
+
+
+/**SECTION TWO MOBILE VERSION**/
+
+@include media-breakpoint-md {
+    .information-navigation-menu {
+        white-space: nowrap;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+}
+
+
+/**END OF SECTION TWO MOBILE VERSION**/
+
+
+/**END OF SECTION TWO**/
+
+
+/**SECTION THREE**/
+
+
+/**SECTION THREE MIXIN**/
+
+@mixin accordion-btn {
+    .accordion-button {
+        color: #E4E4E4;
+        border-bottom: 1px solid #707070;
+        &:focus {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #707070;
+            box-shadow: none;
+        }
+        &:not(.collapsed) &::after {
+            background-image: url(../images/icons/down-arrow-icon.svg);
+        }
+        &:not(.collapsed) {
+            background-color: transparent;
+            border-left: none;
+            border-top: none;
+            border-right: none;
+        }
+        &::after {
+            background-image: url(../images/icons/down-arrow-icon.svg);
+        }
+    }
+}
+
+@mixin information-section-3 {
+    .information-section-3-title {
+        color: $color;
+    }
+    .highlights-list {
+        margin-top: 50px;
+        .accordion-item {
+            @include accordion-btn;
+            .accordion-body {
+                p {
+                    color: #E4E4E4;
+                    font-weight: 300;
+                    font-size: small;
+                }
+            }
+        }
+    }
+}
+
+
+/**END OF SECTION THREE MIXIN**/
+
+
+/**SECTION THREE DESKTOP VERSION**/
+
+.information-section-3-mobile {
+    display: none;
+}
+
+.information-section-3-desktop {
+    .container {
+        margin-right: 0;
+        @include information-section-3;
+        .highlights-image {
+            width: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            #{$start-direction}: 0;
+            z-index: 1;
+            @include transition( opacity 3s ease);
+            &.show-image {
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+
+/**END OF SECTION THREE DESKTOP VERSION**/
+
+
+/**SECTION THREE MOBILE VERSION**/
+
+@include media-breakpoint-md {
+    .information-section-3-desktop {
+        display: none;
+    }
+    .information-section-3-mobile {
+        display: block;
+        @include information-section-3;
+        .safety {
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+}
+
+
+/**END OF SECTION THREE MOBILE VERSION**/
+
+
+/**END OF SECTION THREE**/
+
+
+/**SECTION FOUR**/
+
+.exterior-design {
+    .container {
+        margin-right: 0;
+        .exterior {
+            margin: 55px 0;
+            .exterior-title {
+                color: $color;
+            }
+            .exterior-images {
+                width: 100%;
+                display: flex;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                .exterior-image {
+                    width: 40%;
+                    &+.exterior-image {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/**END OF SECTION FOUR**/
+
+
+/**SECTION FIVE**/
+
+.interior-design {
+    .container {
+        margin-right: 0;
+        .interior {
+            margin: 55px 0;
+            .interior-title {
+                color: $color;
+            }
+            .interior-images {
+                width: 100%;
+                display: flex;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                .interior-image {
+                    width: 40%;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
+
+
+/**END OF SECTION FIVE**/
+
+
+/**SECTION SIX**/
+
+.car-colors {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .car-image {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+    }
+    .colors {
+        margin-top: 50px;
+        .colors-title {
+            text-align: center;
+            color: $color;
+        }
+        .colors-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .color-btn {
+                border: 1px solid #707070;
+                border-radius: 50%;
+                margin: 5px 5px;
+                width: 20px;
+                height: 20px;
+                &.white-color {
+                    background-color: $color;
+                }
+                &.blue-color {
+                    background-color: #232E83;
+                }
+                &.brown-color {
+                    background-color: #4A3525;
+                }
+                &.red-color {
+                    background-color: #D32A2A;
+                }
+            }
+        }
+    }
+}
+
+
+/**END OF SECTION SIX**/
+
+
+/**SECTION SEVEN**/
+
+.gallery {
+    margin: 40px 0;
+    .gallery-title {
+        color: $color;
+        text-align: center;
+    }
+    .gallery-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .image-container {
+            position: relative;
+            text-align: center;
+            .gallery-image-title {
+                position: absolute;
+                color: $color;
+                text-align: center;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 20px;
+            }
+            .gallery-image {
+                width: 250px;
+                height: 250px;
+            }
+            .gallery-image-arrow {
+                position: absolute;
+                bottom: 20px;
+                right: 25%;
+                left: 50%;
+                margin-left: -25px;
+            }
+        }
+        .red-box {
+            background-color: $secondry-color;
+            position: relative;
+            width: 250px;
+            height: 250px;
+            .red-box-title {
+                text-align: center;
+                color: $color;
+                position: relative;
+                top: 20px;
+            }
+            .red-box-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                width: 74%;
+            }
+            .red-box-arrow {
+                border: none;
+                border-radius: 50%;
+                background-color: $color;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                bottom: 20px;
+                right: 25%;
+                left: 50%;
+                margin-left: -25px;
+                .fa {
+                    color: #5A80FB;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+/**END OF SECTION SEVEN**/
+
+
+/**SECTION EIGHT**/
+
+.major-specs {
+    margin: 114px 0 56px 0px;
+    .major-specs-title {
+        color: $color;
+        margin-bottom: 40px;
+    }
+    .major-specs-text {
+        color: #E4E4E4;
+        font-weight: 300;
+        margin: 0 0;
+    }
+}
+
+
+/**END OF SECTION EIGHT**/
+
+
+/**SECTION NINE**/
+
+.configuration {
+    margin-bottom: 100px;
+    .title-button-container {
+        display: flex;
+        .configuration-title {
+            color: $color;
+            width: auto;
+            white-space: nowrap;
+        }
+        .accordion-header {
+            margin-left: 20px;
+            width: 100%;
+            @include accordion-btn;
+            .accordion-button {
+                height: 50%;
+            }
+        }
+    }
+    .accordion-body {
+        .table {
+            .table-head {
+                font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                font-weight: 300;
+                color: $color;
+                border-top: none;
+                border-bottom: 1px solid #292929;
+                text-align: center;
+                &.config {
+                    text-align: left;
+                }
+            }
+            .table-data {
+                color: #E4E4E4;
+                font-weight: 300;
+                border-bottom: 1px solid #292929;
+                font-size: 21px;
+                .spec-check {
+                    border: 1px solid #707070;
+                    height: 28px;
+                    width: 28px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    display: inline-block;
+                    &.checked {
+                        background-color: $color;
+                    }
+                }
+                &.table-data-centered {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+/**END OF SECTION NINE**/
+
+
+/**SECTION TEN**/
+
+.starting-from {
+    .starting-from-title {
+        color: $color;
+        margin-bottom: 40px;
+    }
+    p {
+        color: #E4E4E4;
+        font-weight: 300;
+        margin: 0 0;
+    }
+}
+
+
+/**END OF SECTION TEN**/
+
+
+/**SECTION ELEVEN**/
+
+@mixin appointment-form {
+    display: flex;
+    flex-direction: column;
+    .form-label {
+        color: #E4E4E4;
+        font-weight: 500;
+        margin: 0 0;
+    }
+    .form-select {
+        font-size: small;
+        margin-bottom: 40px;
+        background-color: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #707070;
+        cursor: pointer;
+        color: #707070;
+        &:focus {
+            border-bottom: 1px solid #707070;
+            box-shadow: none;
+        }
+        .select-option {
+            color: #707070;
+            border: 0;
+            background: transparent;
+            -webkit-appearance: none;
+        }
+    }
+    .form-input {
+        color: #707070;
+        font-size: small;
+        margin-bottom: 40px;
+        background-color: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #707070;
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid #707070;
+        }
+    }
+}
+
+.appointment {
+    margin: 60px 0;
+    .appointment-title {
+        margin-bottom: 40px;
+        color: $color;
+    }
+    .form-one {
+        @include appointment-form;
+    }
+    .form-two {
+        @include appointment-form;
+    }
+    .send-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+
+/**END OF SECTION ELEVEN**/
+
+
+/**SECTION TWELVE**/
+
+.where-to {
+    margin: 10px 0;
+    .where-to-title {
+        color: $color;
+    }
+    .cars {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        .car {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .car-image {
+                width: 100%;
+            }
+            .car-name-image {
+                margin-top: 10px;
+                width: 90%;
+            }
+        }
+    }
+}
+
+
+/**END OF SECTION TWELVE**/

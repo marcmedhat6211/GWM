@@ -1,0 +1,7 @@
+.btn-style-2 {
+    @extend %btn-base;
+    border-radius: 3px;
+    &:hover {
+        color: $color;
+    }
+}

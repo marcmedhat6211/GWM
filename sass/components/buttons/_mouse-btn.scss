@@ -1,0 +1,29 @@
+.mouse-btn {
+    @extend %btn-base;
+    border-radius: 7px;
+    font-weight: bold;
+    height: 25px;
+    width: 18px;
+    &::before {
+        content: '';
+        height: 8px;
+        width: 2px;
+        border-radius: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: .5s;
+        animation: mouseAnimation 3s infinite;
+    }
+}
+
+@keyframes mouseAnimation {
+    0% {
+        top: 2px;
+    }
+    100% {
+        top: 7px;
+    }
+}

@@ -1,0 +1,28 @@
+footer {
+    margin: 100px 0;
+    .footer-line {
+        color: #707070;
+    }
+    .footer-body {
+        margin-top: 90px;
+        .footer-logo {
+            width: 85%;
+        }
+        .copyright {
+            margin-top: 60px;
+            color: #707070;
+            font-size: smaller;
+        }
+        .footer-text {
+            color: #707070;
+            font-size: small;
+        }
+        .footer-link {
+            color: #707070;
+            font-size: small;
+            &:hover {
+                color: $secondry-color;
+            }
+        }
+    }
+}

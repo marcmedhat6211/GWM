@@ -1,12 +1,12 @@
-(function ($) {
+$(document).ready(function() {
 
     /**SLIDER USING SWIPER**/
     var cardSlider = new Swiper('.card-slider', {
         loop: true,
         navigation: {
-			nextEl: '.swiper-btn-next',
-			prevEl: '.swiper-btn-prev'
-		},
+            nextEl: '.swiper-btn-next',
+            prevEl: '.swiper-btn-prev'
+        },
         slidesPerView: 1.85,
         spaceBetween: 60,
         centeredSlides: true,
@@ -25,25 +25,25 @@
             },
         }
     });
-    
+
     var count = 1;
     window.onload = function() {
         document.getElementById("counter").innerHTML = `${count}/3`;
     }
 
-    cardSlider.on('slideNextTransitionStart', function () {
+    cardSlider.on('slideNextTransitionStart', function() {
         count++;
-        if(count <=3 ) {
+        if (count <= 3) {
             document.getElementById("counter").innerHTML = `${count}/3`;
         } else {
             count = 1;
             document.getElementById("counter").innerHTML = `${count}/3`;
         }
     });
-    
-    cardSlider.on('slidePrevTransitionStart', function () {
+
+    cardSlider.on('slidePrevTransitionStart', function() {
         count -= 1;
-        if(count >= 1) {
+        if (count >= 1) {
             document.getElementById("counter").innerHTML = `${count}/3`;
         } else {
             count = 3;
@@ -51,19 +51,8 @@
         }
     });
 
-})(jQuery);
+});
 
-function toggle() {
-    document.getElementById("dropdown-menu").classList.toggle("show");
-}
-
-function openNav() {
-    document.getElementById("menu").style.height = "100vh";
-}
-
-function closeNav() {
-    document.getElementById("menu").style.height = "0vh";
-}
 
 // var count = 2;
 // function increment() {

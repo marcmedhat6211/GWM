@@ -1,0 +1,189 @@
+.navbar-toggle {
+    display: none;
+}
+
+.navbar-custom {
+    margin: 20px 80px;
+    .navbar-expand-md {
+        justify-content: space-between;
+        .logo-image {
+            width: 70%;
+        }
+        .navbar-nav {
+            height: 36px;
+            .nav-link {
+                font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                font-weight: 300;
+                border-bottom: 1px solid transparent;
+                padding: 10px 20px;
+                &:hover {
+                    border-bottom-color: $secondry-color;
+                    display: inline-block;
+                }
+            }
+            .dropdown {
+                .dropdown-menu {
+                    background-color: $primary-color;
+                    position: absolute;
+                    #{$start-direction}: -400px;
+                    width: 70vw;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    @include boxShadow( 0px 10px 40px rgba(0, 0, 0, 0.16));
+                    border: 1px solid #3B3B3B;
+                    .dropdown-item:hover {
+                        background: none;
+                    }
+                    .dropdown-item {
+                        width: 33%;
+                        margin-bottom: 15px;
+                        &:active,
+                        &:focus {
+                            background-color: transparent;
+                            outline: none;
+                        }
+                        .car {
+                            display: flex;
+                            flex-direction: column;
+                            .dropdown-car-name {
+                                width: 90%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .dropdown-menu {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    .navbar-custom {
+        display: none;
+    }
+    .navbar-toggle {
+        display: block;
+        .logo-img {
+            width: 169px;
+            padding: 10px;
+        }
+        .menu-btn {
+            float: $end-direction;
+            padding: 15px;
+        }
+        .overlay {
+            width: 100%;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            #{$start-direction}: 0;
+            background-color: black;
+            transition: 0.5s;
+            .flex-container {
+                height: 0vh;
+                visibility: hidden;
+                display: flex;
+                justify-content: row;
+                position: relative;
+                @include transition( height .5s);
+                &.show {
+                    height: 100vh;
+                    visibility: visible;
+                }
+                .flex-left {
+                    background-color: $secondry-color;
+                    height: 100vh;
+                    width: 73px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    bottom: 0;
+                    padding-bottom: 80px;
+                }
+                .flex-right {
+                    position: relative;
+                    width: calc(100% - 73px);
+                    padding-top: 60px;
+                    margin-bottom: 0;
+                    overflow-y: auto;
+                    .close-icon {
+                        position: absolute;
+                        top: 0;
+                        #{$end-direction}: 0;
+                        float: $end-direction;
+                        padding: 15px;
+                    }
+                    .mobile-menu {
+                        text-align: $start-direction;
+                        .dropdown {
+                            display: inline-block;
+                            position: relative;
+                            .nav-item {
+                                display: block;
+                                .dropdown-button {
+                                    position: relative;
+                                    #{$start-direction}: 15px;
+                                    background-color: transparent;
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    font-weight: 300;
+                                    font-size: 30px;
+                                    &:hover {
+                                        border-bottom: 1px solid $secondry-color;
+                                    }
+                                }
+                                .dropdown-content {
+                                    display: none;
+                                    background-color: transparent;
+                                    // overflow: auto;
+                                    position: relative;
+                                    #{$end-direction}: 45px;
+                                    &.show {
+                                        display: block;
+                                    }
+                                    .dropdown-items {
+                                        list-style-type: none;
+                                        .dropdown-item {
+                                            font-size: 22px;
+                                            display: block;
+                                            color: $color;
+                                            &:hover {
+                                                background-color: transparent;
+                                                color: $secondry-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .nav-item {
+                            display: block;
+                            .nav-link {
+                                font-size: 30px;
+                                padding-top: 30px;
+                                &:hover {
+                                    border-bottom: 1px solid $secondry-color;
+                                    display: inline-block;
+                                    width: auto;
+                                }
+                            }
+                        }
+                    }
+                    .menu-social-media {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        .fa {
+                            width: 50px;
+                            margin: 5px 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

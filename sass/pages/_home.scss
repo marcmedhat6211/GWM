@@ -1,0 +1,92 @@
+.home-screen-container {
+    height: calc(100vh - 171px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 50px;
+    /**SLIDER**/
+    .slider {
+        background-color: transparent;
+        .swiper-container {
+            position: static;
+            width: 100%;
+            .card {
+                border: none;
+                background-color: transparent;
+                .slider-car {
+                    margin: 0 auto;
+                    width: 90%;
+                    height: auto;
+                }
+                .slider-car-name {
+                    margin-right: auto;
+                    margin-left: auto;
+                    width: 80%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    /**END OF SLIDER**/
+    /**DISCOVER MORE BUTTON**/
+    .discover-more-btn {
+        display: flex;
+        justify-content: center;
+    }
+    /**END OF DISCOVER MORE BUTTON**/
+    /**SOCIAL MEDIA AND PAGINATION**/
+    .fa {
+        width: 50px;
+        margin: 5px 2px;
+        text-align: center;
+    }
+    .mouse {
+        display: flex;
+        justify-content: center;
+    }
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .prev-text {
+            font-size: smaller;
+        }
+        .counter-text {
+            padding: 0 40px;
+            font-size: smaller;
+            margin-bottom: 0px;
+        }
+        .next-text {
+            font-size: smaller;
+        }
+    }
+}
+
+
+/**HOME SCREEN RESPONSIVE**/
+
+@include media-breakpoint-md {
+    .home-screen-container {
+        margin-top: 50px;
+        .home-footer {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            .social-media {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 20px;
+            }
+            .mouse {
+                display: none;
+            }
+            .pagination {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+/**HOME SCREEN RESPONSIVE**/
