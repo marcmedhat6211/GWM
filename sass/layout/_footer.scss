@@ -1,5 +1,6 @@
 footer {
-    margin: 100px 0;
+    margin-top: 104px;
+    margin-bottom: 209px;
     .footer-line {
         color: #707070;
     }
@@ -9,20 +10,32 @@ footer {
             width: 85%;
         }
         .copyright {
-            margin-top: 60px;
+            margin-top: 66px;
             color: #707070;
-            font-size: smaller;
+            font-size: 15px;
         }
         .footer-text {
             color: #707070;
-            font-size: small;
+            font-size: 15px;
         }
         .footer-link {
             color: #707070;
-            font-size: small;
+            font-size: 15px;
             &:hover {
                 color: $secondry-color;
             }
+        }
+    }
+}
+
+@include media-breakpoint-md {
+    footer {
+        margin: 50px 0;
+        .footer-logo {
+            width: 35% !important;
+        }
+        .footer-text {
+            margin-top: 20px;
         }
     }
 }

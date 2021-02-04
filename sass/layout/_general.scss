@@ -3,6 +3,7 @@ body {
     text-align: $start-direction;
     background-color: $primary-color;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 a {

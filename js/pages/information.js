@@ -20,6 +20,31 @@ $(document).ready(function() {
     //     $(".transmission").toggleClass("show-image");
     // });
 
+
+    /**SLIDER USING SWIPER**/
+    var informationSlider = new Swiper('.exterior-interior-slider', {
+        loop: false,
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+        breakpoints: {
+            640: {
+                slidesPerView: 1.5,
+                spaceBetween: 5,
+            },
+            768: {
+                slidesPerView: 1.5,
+                spaceBetween: 5,
+            },
+            1024: {
+                slidesPerView: 1.5,
+                spaceBetween: 5,
+            },
+        }
+    });
+
+
+
+
     $("#highlights button").click(function() {
         let elementId = $(this).attr("id");
         $(".highlights-image.show-image").removeClass("show-image");
